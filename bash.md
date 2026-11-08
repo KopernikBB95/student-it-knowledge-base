@@ -1,7 +1,7 @@
 # UKOS
 ## linux komendy
 
-** | Polecenie | Przykład użycia | Znaczenie | **
+| Polecenie | Przykład użycia | Znaczenie |
 |---|---|---|
 | *pwd* | ```pwd``` | Wyświetlanie ścieżki bieżącego katalogu. |
 | *ls* | ```ls - la ```| Listowanie plików, także ukrytych, w formacie szczegółowym. |
