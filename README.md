@@ -8,12 +8,20 @@ https://pjmpr.github.io/WARP2627/laboratoria/lab-04.html
 ├── README.md
 └── docs/
     ├── prg1/
-    │   └── dotnet-cli.md
+    │   └── dotnet-cli.md 
     ├── ukos/
     │   └── bash.md
     └── warp/
         └── git.md
 ```
+### Linki relatywne do komend
+[Komendy Dotnet](docs/prg1/dotnet-cli.md)
+
+[Komendy Bash](docs/ukos/bash.md)
+
+[Komendy Git](docs/warp/git.md)
+
+
 ## Instrukcja korzystania.
 Każdy plik zawiera listę komend dla danego przedmiotu.
 
