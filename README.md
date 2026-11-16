@@ -1,5 +1,5 @@
 # Praca zespołowa GitHub
-Projekt stworzony wg poniżych instrukcji z laboratorium nr 4:
+Projekt zrobiony na laboratoriach "Warsztat Programisty".Zrobione wedgług instrukcji do laboratorium nr 4 z poniższej strony:
 
 https://pjmpr.github.io/WARP2627/laboratoria/lab-04.html
 
