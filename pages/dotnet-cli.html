@@ -1,31 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
-
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ściąga Dotnet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ściąga .NET CLI – Baza wiedzy studenta</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-
 <body>
     <header>
-        <p>Ściąga komend Dotnet</p>
-        <nav aria-label="Główna nawigacja">
-            <a href="../index.html"><strong>Start</strong></a>
-            <a href="bash.html"><strong>Bash</strong></a>
-            <a href="git.html"><strong>Git</strong></a>
-        </nav>
+        <h1>Ściąga komend .NET CLI</h1>
+        <p>Podstawowe informacje i polecenia .NET CLI.</p>
     </header>
-
+    <nav>
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="bash.html">Bash</a></li>
+            <li><a href="git.html">Git</a></li>
+        </ul>
+    </nav>
     <main>
-        <article>
-            <h1>.NET CLI</h1>
-            <p>.NET CLI (Command-Line Interface) to międzyplatformowy zestaw narzędzi wiersza polecenia, który służy do tworzenia, budowania, uruchamiania i publikowania aplikacji .NET bez konieczności używania rozbudowanego środowiska IDE (np. Visual Studio). Jest instalowany automatycznie razem z zestawem .NET SDK.</p>
-            <section>
-                <h2>Tworzenie podstawowej aplikacji .NET CLI</h2>
-                <pre><code>dotnet --version
+        <section id="wprowadzenie">
+            <h2>.NET CLI</h2>
+            <p>
+                .NET CLI (Command-Line Interface) to międzyplatformowy zestaw narzędzi wiersza polecenia, który służy do tworzenia, budowania, uruchamiania i publikowania aplikacji .NET bez konieczności używania rozbudowanego środowiska IDE (np. Visual Studio). Jest instalowany automatycznie razem z zestawem .NET SDK.
+            </p>
+        </section>
+        <section id="tworzenie">
+            <h2>Tworzenie podstawowej aplikacji .NET CLI</h2>
+            <pre><code>dotnet --version
 dotnet --list-sdks
 dotnet new list
 dotnet new console -n MojaAplikacja
@@ -34,35 +36,85 @@ dotnet restore
 dotnet build
 dotnet run
 dotnet clean</code></pre>
-            </section>
+        </section>
+        <section id="polecenia">
+            <h2>Podstawowe polecenia .NET CLI</h2>
+            <table>
+                <tr>
+                    <th>Polecenie</th>
+                    <th>Przykład użycia</th>
+                    <th>Znaczenie</th>
+                </tr>
 
-    <div>
-  <table>
-    <caption>Podstawowe polecenia .NET CLI</caption>
-    <thead>
-      <tr><th>Polecenie</th><th>Przykład użycia</th><th>Znaczenie</th></tr>
-    </thead>
-    <tbody>
-        <tr><td><code>dotnet --version</code></td><td><code>dotnet --version</code></td><td>Sprawdzenie zainstalowanej wersji zestawu .NET SDK.</td></tr>
-        <tr><td><code>dotnet --list-sdks</code></td><td><code>dotnet --list-sdks</code></td><td>Wyświetlenie wszystkich dostępnych wersji SDK.</td></tr>
-        <tr><td><code>new list</code></td><td><code>dotnet new list</code></td><td>Wyświetlenie dostępnych szablonów projektów</td></tr>
-        <tr><td><code>new console</code></td><td><code>dotnet new console</code></td><td>Utworzenie aplikacji konsolowej w bieżącym katalogu. </td></tr>
-        <tr><td><code>new console -n</code></td><td><code>dotnet new console -n MyApp</code></td><td>Utworzenie aplikacji konsolowej w bieżącym katalogu.<code>MyApp</code> </td></tr>
-        <tr><td><code>dotnet restore</code></td><td><code>dotnet restore</code></td><td>Pobranie zależności wymaganych przez projekt. </td></tr>
-        <tr><td><code>dotnet build</code></td><td><code>dotnet build</code></td><td>Kompilacja projektu i odczyt komunikatów o błędach. </td></tr>
-        <tr><td><code>dotnet run</code></td><td><code>dotnet run --project MyApp</code></td><td>Zbudowanie i uruchomienie wskazanego projektu.</td></tr>
-        <tr><td><code>dotnet clean</code></td><td><code>dotnet clean</code></td><td>Usunięcie plików wygenerowanych podczas kompilacji.</td></tr>
-    </tbody>
-  </table>
-    </div>
-        </article>
+                <tr>
+                    <td>dotnet --version</td>
+                    <td><code>dotnet --version</code></td>
+                    <td>Sprawdzenie zainstalowanej wersji zestawu .NET SDK.</td>
+                </tr>
+
+                <tr>
+                    <td>dotnet --list-sdks</td>
+                    <td><code>dotnet --list-sdks</code></td>
+                    <td>Wyświetlenie wszystkich dostępnych wersji SDK.</td>
+                </tr>
+
+                <tr>
+                    <td>new list</td>
+                    <td><code>dotnet new list</code></td>
+                    <td>Wyświetlenie dostępnych szablonów projektów.</td>
+                </tr>
+
+                <tr>
+                    <td>new console</td>
+                    <td><code>dotnet new console</code></td>
+                    <td>Utworzenie aplikacji konsolowej w bieżącym katalogu.</td>
+                </tr>
+
+                <tr>
+                    <td>new console -n</td>
+                    <td><code>dotnet new console -n MyApp</code></td>
+                    <td>Utworzenie aplikacji konsolowej w bieżącym katalogu. MyApp.</td>
+                </tr>
+
+                <tr>
+                    <td>dotnet restore</td>
+                    <td><code>dotnet restore</code></td>
+                    <td>Pobranie zależności wymaganych przez projekt.</td>
+                </tr>
+
+                <tr>
+                    <td>dotnet build</td>
+                    <td><code>dotnet build</code></td>
+                    <td>Kompilacja projektu i odczyt komunikatów o błędach.</td>
+                </tr>
+
+                <tr>
+                    <td>dotnet run</td>
+                    <td><code>dotnet run --project MyApp</code></td>
+                    <td>Zbudowanie i uruchomienie wskazanego projektu.</td>
+                </tr>
+
+                <tr>
+                    <td>dotnet clean</td>
+                    <td><code>dotnet clean</code></td>
+                    <td>Usunięcie plików wygenerowanych podczas kompilacji.</td>
+                </tr>
+            </table>
+        </section>
     </main>
-
     <footer>
-        <h3>Przydatne linki<h3>
-        <a href="../docs/prg1/dotnet-cli.md"">Lista komend w formacie MD</a>
-        <a href="https://learn.microsoft.com/pl-pl/dotnet/core/tools/"">Dokumentacja .NET CLI</a>
+        <h2>Przydatne linki</h2>
+        <p>
+            <a href="../docs/prg1/dotnet-cli.md">
+                Lista komend w formacie MD
+            </a>
+        </p>
+        <p>
+            <a href="https://learn.microsoft.com/pl-pl/dotnet/core/tools/" target="_blank">
+                Dokumentacja .NET CLI
+            </a>
+        </p>
+        <p>Projekt edukacyjny – Student IT Knowledge Base</p>
     </footer>
 </body>
-
 </html>

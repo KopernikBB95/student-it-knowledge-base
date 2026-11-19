@@ -1,68 +1,132 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="pl">
-
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ściąga Bash</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podstawy Bash – Baza wiedzy studenta</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-
 <body>
+
     <header>
-        <p>Ściąga komend Bash</p>
-        <nav aria-label="Główna nawigacja">
-            <a href="../index.html"><strong>Start</strong></a>
-            <a href="git.html"><strong>Git</strong></a>
-            <a href="dotnet-cli.html"><strong>Dotnet</strong></a>
-        </nav>
+        <h1>Ściąga komend Bash</h1>
+        <p>Podstawowe informacje i polecenia powłoki Bash.</p>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="git.html">Git</a></li>
+            <li><a href="dotnet-cli.html">Dotnet</a></li>
+        </ul>
+    </nav>
     <main>
-        <article>
-            <h1>Podstawy Basha:</h1>
-            <p>Bash to podstawowa powłoka używana przez większość dystrybucji systemu linux.</p>
-            <p>Shell (tłum. powłoka) to interfejs wiersza poleceń, z którego korzystamy do uruchamiania programów na komputerach</p>
-            <p>Terminal to program, którego używa się do interakcji z daną powłoką. Jest to interfejs do Shell i innych programów wiersza poleceń, które wewnątrz niego działają. Jest to coś zbliżonego do przeglądarki, która jest interfejsem stron internetowych. </p>
-            <section>
-                <h2>Podstawowe zasady bezpieczeństwa w Bashu:</h2>
-                <ul>
-                    <li><strong>Sprawdzaj kontekst:</strong> używaj <code>pwd</code> i <code>ls</code> przed modyfikacją lub usuwaniem plików.</li>
-                    <li><strong>Uważaj na spacje i gwiazdki:</strong> bierz nazwy ze spacjami w cudzysłów <code>"..."</code> i testuj wzorce z <code>ls</code> przed użyciem <code>rm</code>.</li>
-                    <li><strong>Korzystaj z klawisza Tab:</strong> autouzupełnianie nazw plików i katalogów chroni przed literówkami.</li>
-                    <li><strong>Zatrzymuj procesy bezpiecznie:</strong> skrót <code>Ctrl + C</code> przerywa bieżące polecenie.</li>
-                </ul>
-            </section>
-
-    <div>
-  <table>
-    <caption>Podstawowe polecenia Bash</caption>
-    <thead>
-      <tr><th>Polecenie</th><th>Przykład użycia</th><th>Znaczenie</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><code>pwd</code></td><td><code>pwd</code></td><td>Wyświetlanie ścieżki bieżącego katalogu.</td></tr>
-<tr><td><code>ls</code></td><td><code>ls - la</code></td><td>Listowanie plików, także ukrytych, w formacie szczegółowym.</td></tr>
-<tr><td><code>cd</code></td><td><code>cd docs/ukos oraz cd </code></td><td>Przechodzenie do katalogu i katalogu nadrzędnego.</td></tr>
-<tr><td><code>mkdir</code></td><td><code>mkdir -p docs/ukos </code></td><td>Tworzenie katalogu wraz z brakującymi katalogami nadrzędnymi.</td></tr>
-<tr><td><code>touch</code></td><td><code>touch bash.md</code></td><td>Tworzenie pustego pliku lub aktualizacja czasu jego modyfikacji.</td></tr>
-<tr><td><code>cp</code></td><td><code>cp bash.md bash-backup.md</code></td><td>Kopiowanie pliku</td></tr>
-<tr><td><code>mv</code></td><td><code>mv bash-backup.md archive.md</code></td><td>Przenoszenie i zmiana nazwy pliku.</td></tr>
-<tr><td><code>rm</code></td><td><code>rm archive.md</code></td><td>Usuwanie pliku i ostrzeżenie, że operacja omija kosz. </td></tr>
-<tr><td><code>cat</code></td><td><code>cat bash.md</code></td><td>Wyświetlanie zawartości pliku w terminalu.</td></tr>
-<tr><td><code>clear</code></td><td><code>clear</code></td><td>Czyszczenie widoku terminala bez usuwania historii poleceń.</td></tr>
-    </tbody>
-  </table>
-    </div>
-        </article>
+        <section id="wprowadzenie">
+            <h2>Podstawy Basha</h2>
+            <p>
+                Bash to podstawowa powłoka używana przez większość dystrybucji systemu linux.
+            </p>
+            <p>
+                Shell (tłum. powłoka) to interfejs wiersza poleceń, z którego korzystamy do uruchamiania programów na komputerach.
+            </p>
+            <p>
+                Terminal to program, którego używa się do interakcji z daną powłoką. Jest to interfejs do Shell i innych programów wiersza poleceń, które wewnątrz niego działają. Jest to coś zbliżonego do przeglądarki, która jest interfejsem stron internetowych.
+            </p>
+        </section>
+        <section id="bezpieczenstwo">
+            <h2>Podstawowe zasady bezpieczeństwa w Bashu</h2>
+            <ol>
+                <li>
+                    <strong>Sprawdzaj kontekst:</strong>
+                    używaj <code>pwd</code> i <code>ls</code> przed modyfikacją lub usuwaniem plików.
+                </li>
+                <li>
+                    <strong>Uważaj na spacje i gwiazdki:</strong>
+                    bierz nazwy ze spacjami w cudzysłów <code>"..."</code> i testuj wzorce z <code>ls</code> przed użyciem <code>rm</code>.
+                </li>
+                <li>
+                    <strong>Korzystaj z klawisza Tab:</strong>
+                    autouzupełnianie nazw plików i katalogów chroni przed literówkami.
+                </li>
+                <li>
+                    <strong>Zatrzymuj procesy bezpiecznie:</strong>
+                    skrót <code>Ctrl + C</code> przerywa bieżące polecenie.
+                </li>
+            </ol>
+        </section>    
+        <section id="polecenia">
+            <h2>Podstawowe polecenia Linux</h2>
+            <table>
+                <tr>
+                    <th>Polecenie</th>
+                    <th>Przykład użycia</th>
+                    <th>Znaczenie</th>
+                </tr>
+                <tr>
+                    <td>pwd</td>
+                    <td><code>pwd</code></td>
+                    <td>Wyświetlanie ścieżki bieżącego katalogu.</td>
+                </tr>
+                <tr>
+                    <td>ls</td>
+                    <td><code>ls - la</code></td>
+                    <td>Listowanie plików, także ukrytych, w formacie szczegółowym.</td>
+                </tr>
+                <tr>
+                    <td>cd</td>
+                    <td><code>cd docs/ukos oraz cd </code></td>
+                    <td>Przechodzenie do katalogu i katalogu nadrzędnego.</td>
+                </tr>
+                <tr>
+                    <td>mkdir</td>
+                    <td><code>mkdir -p docs/ukos</code></td>
+                    <td>Tworzenie katalogu wraz z brakującymi katalogami nadrzędnymi.</td>
+                </tr>
+                <tr>
+                    <td>touch</td>
+                    <td><code>touch bash.md</code></td>
+                    <td>Tworzenie pustego pliku lub aktualizacja czasu jego modyfikacji.</td>
+                </tr>
+                <tr>
+                    <td>cp</td>
+                    <td><code>cp bash.md bash-backup.md</code></td>
+                    <td>Kopiowanie pliku.</td>
+                </tr>
+                <tr>
+                    <td>mv</td>
+                    <td><code>mv bash-backup.md archive.md</code></td>
+                    <td>Przenoszenie i zmiana nazwy pliku.</td>
+                </tr>
+                <tr>
+                    <td>rm</td>
+                    <td><code>rm archive.md</code></td>
+                    <td>Usuwanie pliku i ostrzeżenie, że operacja omija kosz.</td>
+                </tr>
+                <tr>
+                    <td>cat</td>
+                    <td><code>cat bash.md</code></td>
+                    <td>Wyświetlanie zawartości pliku w terminalu.</td>
+                </tr>
+                <tr>
+                    <td>clear</td>
+                    <td><code>clear</code></td>
+                    <td>Czyszczenie widoku terminala bez usuwania historii poleceń.</td>
+                </tr>
+            </table>
+        </section>
     </main>
-
     <footer>
-        <h3>Przydatne linki<h3>
-        <a href="../docs/ukos/bash.md"">Lista komend w formacie MD</a>
-        <a href="https://www.gnu.org/software/bash/manual/"">GNU Bash Manual</a>
+        <h2>Przydatne linki</h2>
+        <p>
+            <a href="../docs/ukos/bash.md">Lista komend w formacie MD</a>
+        </p>
+        <p>
+            <a href="https://www.gnu.org/software/bash/manual/" target="_blank">
+                GNU Bash Manual
+            </a>
+        </p>
+        <p>Projekt edukacyjny – Student IT Knowledge Base.</p>
     </footer>
 </body>
-
 </html>
