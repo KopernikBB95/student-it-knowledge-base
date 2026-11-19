@@ -6,7 +6,6 @@ body {
     background-color: #0b132b;
     color: #ffffff;
 }
-
 /* Nagłówek */
 header {
     background-color: #1c2541;
@@ -15,42 +14,35 @@ header {
     padding: 25px;
     border-bottom: 4px solid #5bc0eb;
 }
-
 header h1 {
     font-size: 36px;
 }
-
 /* Nawigacja */
 nav {
     background-color: #14213d;
     text-align: center;
     padding: 15px;
 }
-
 nav ul {
     padding: 0;
 }
-
 nav li {
     display: inline;
     margin: 15px;
 }
-
 nav a {
     color: #5bc0eb;
     font-weight: bold;
+    text-decoration: none;
 }
-
 nav a:hover {
     color: white;
 }
-
 /* Główna zawartość */
 main {
     width: 80%;
     margin: 30px auto;
 }
-
 /* Sekcje */
 section {
     background-color: #1c2541;
@@ -59,26 +51,22 @@ section {
     padding: 20px;
     margin-bottom: 25px;
 }
-
 section h2 {
     color: #5bc0eb;
 }
-
 /* Listy */
 li {
     margin-bottom: 10px;
 }
-
 /* Linki w sekcjach */
 section a {
     color: #5bc0eb;
+    text-decoration: none;
 }
-
 section a:hover {
     color: white;
     text-decoration: underline;
 }
-
 /* Stopka */
 footer {
     background-color: #1c2541;
@@ -86,4 +74,33 @@ footer {
     text-align: center;
     padding: 15px;
     border-top: 4px solid #5bc0eb;
+}
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+/* Nagłówki */
+th {
+    background-color: #3a506b;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+/* Komórki */
+td {
+    padding: 12px;
+    border: 1px solid #5bc0eb;
+}
+/* Kolory wierszy */
+tr:nth-child(even) {
+    background-color: #1c2541;
+}
+tr:nth-child(odd) {
+    background-color: #14213d;
+}
+/* Polecenia Git */
+td code {
+    color: #5bc0eb;
 }
