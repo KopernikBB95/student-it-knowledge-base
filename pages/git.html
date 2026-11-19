@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARP - Podstawy Git</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Podstawy Git</h1>
+        <p>Najważniejsze informacje i polecenia systemu kontroli wersji Git.</p>
+    </header>
+    <nav>
+        <h2>Nawigacja</h2>
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="bash.html">Bash</a></li>
+            <li><a href="dotnet-cli.html">Dotnet</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="wprowadzenie">
+            <h2>Wprowadzenie do Git</h2>
+            <p>
+                Git to rozproszony system kontroli wersji, który pozwala
+                śledzić zmiany w plikach i współpracować nad projektami.
+                Dzięki niemu można zapisywać kolejne wersje projektu,
+                tworzyć osobne gałęzie oraz łączyć zmiany wprowadzone
+                przez różnych użytkowników.
+            </p>
+        </section>       
+        <section id="polecenia">
+            <h2>Git Cheat Sheet</h2>
+            <table>
+                <tr>
+                    <th>Polecenie</th>
+                    <th>Przykład użycia</th>
+                    <th>Co opisać</th>
+                </tr>
+                <tr>
+                    <td>git clone</td>
+                    <td><code>git clone URL</code></td>
+                    <td>Pobranie repozytorium i utworzenie lokalnego katalogu.</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td><code>git status</code></td>
+                    <td>Sprawdzenie gałęzi oraz plików zmienionych i przygotowanych.</td>
+                </tr>
+                <tr>
+                    <td>git add</td>
+                    <td><code>git add docs/warp/git.md</code></td>
+                    <td>Dodanie konkretnego pliku do obszaru staging.</td>
+                </tr>
+                <tr>
+                    <td>git commit</td>
+                    <td><code>git commit -m "docs: add Git cheatsheet"</code></td>
+                    <td>Zapis przygotowanych zmian z czytelnym komunikatem.</td>
+                </tr>
+                <tr>
+                    <td>git push</td>
+                    <td><code>git push -u origin feature/git-cheatsheet</code></td>
+                    <td>Publikacja nowej gałęzi i ustawienie śledzenia.</td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td><code>git pull --ff-only origin main</code></td>
+                    <td>Pobranie zmian bez tworzenia nieoczekiwanego merge commita.</td>
+                </tr>
+                <tr>
+                    <td>git fetch</td>
+                    <td><code>git fetch origin</code></td>
+                    <td>Pobranie informacji o zmianach bez modyfikowania plików roboczych.</td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td><code>git branch</code></td>
+                    <td>Wyświetlenie lokalnych gałęzi i oznaczenie aktywnej.</td>
+                </tr>
+                <tr>
+                    <td>git switch</td>
+                    <td><code>git switch -c feature/nazwa</code></td>
+                    <td>Utworzenie gałęzi roboczej i przełączenie na nią.</td>
+                </tr>
+                <tr>
+                    <td>git log</td>
+                    <td><code>git log --oneline -5</code></td>
+                    <td>Skrócony podgląd pięciu ostatnich commitów.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="procedura">
+            <h2>Procedura pracy z Git</h2>
+            <p>Przykładowy przebieg pracy nad projektem:</p>
+            <ol>
+                <li>
+                    <strong>Synchronizacja</strong> – pobranie najnowszych
+                    zmian z repozytorium za pomocą git pull.
+                </li>
+                <li>
+                    <strong>Branch</strong> – utworzenie nowej gałęzi
+                    poleceniem git branch nazwa-galezi.
+                </li>
+                <li>
+                    <strong>Zmiana</strong> – przełączenie się na nową
+                    gałąź przez git switch nazwa-galezi i edycja plików.
+                </li>
+                <li>
+                    <strong>Commit</strong> – dodanie plików poleceniem
+                    git add . i zapisanie zmian przez git commit.
+                </li>
+                <li>
+                    <strong>Push</strong> – wysłanie zmian do repozytorium
+                    za pomocą git push.
+                </li>
+                <li>
+                    <strong>PR (Pull Request)</strong> – utworzenie
+                    prośby o połączenie zmian z główną gałęzią projektu.
+                </li>
+            </ol>
+        </section>
+        <section id="dokumentacja">
+            <h2>Dokumentacja</h2>
+            <ul>
+                <li>
+                    <a href="../docs/warp/git.md">
+                        Dokumentacja Git w projekcie
+                    </a>
+                </li>
+                <li>
+                    <a href="https://git-scm.com/docs" target="_blank">
+                        Oficjalna dokumentacja Git
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Projekt edukacyjny – Student IT Knowledge.</p>
+    </footer>
+</body>
+</html>
